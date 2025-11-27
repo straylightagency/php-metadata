@@ -1,0 +1,40 @@
+{
+    "name": "anthonypauwels/metadata",
+    "type": "library",
+    "description": "An helper package to build metadata tags on PHP pages",
+    "keywords": [
+        "metadata",
+        "twitter",
+        "cards",
+        "facebook",
+        "opengraph",
+        "tags",
+        "helper"
+    ],
+    "authors": [
+      {
+        "name": "Anthony Pauwels",
+        "email": "anthony@straylightagency.be",
+        "homepage": "https://Straylightagency.be/"
+      }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Straylightagency\\Metadata\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Straylightagency\\Metadata\\Laravel\\MetadataServiceProvider"
+            ],
+            "aliases": {
+                "Metadata": "Straylightagency\\Metadata\\Laravel\\Metadata"
+            }
+        }
+    }
+}
