@@ -1,5 +1,5 @@
 {
-    "name": "anthonypauwels/metadata",
+    "name": "straylightagency/metadata",
     "type": "library",
     "description": "An helper package to build metadata tags on PHP pages",
     "keywords": [
@@ -15,7 +15,7 @@
       {
         "name": "Anthony Pauwels",
         "email": "anthony@straylightagency.be",
-        "homepage": "https://Straylightagency.be/"
+        "homepage": "https://straylightagency.be/"
       }
     ],
     "require": {
