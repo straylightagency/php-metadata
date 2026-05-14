@@ -2,7 +2,7 @@
 namespace Straylightagency\Metadata;
 
 /**
- * Class Metadata
+ * Class MetadataManager
  *
  * @package Straylightagency\Metadata
  * @author Anthony Pauwels <anthony@straylightagency.be>

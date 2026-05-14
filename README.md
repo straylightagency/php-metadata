@@ -1,6 +1,6 @@
 # PHP Metadata
 
-An helper package to build metadata tags on PHP pages.
+A helper package to build metadata tags on PHP pages.
 
 ## Installation
 
@@ -39,6 +39,8 @@ $metadata->twitterCard( 'app' );
 $metadata->twitterImage( asset( '/img/twitter_meta.jpg' ) );
 $metadata->ogImage( asset( '/img/facebook_meta.jpg' ), width: 1200, height: 600, type: 'jpeg' );
 $metadata->ogType( 'website' );
+
+echo $metadata; // print the meta tags
 ```
 
 ### With Laravel
@@ -60,7 +62,7 @@ Examples bellow are using Laravel Facade `Metadata`.
 Metadata::title( 'My page title', [flags: int = Metadata::ALL] );
 Metadata::metaTitle( 'My page title' ); // only a simple meta title
 Metadata::twitterTitle( 'My page title' ); // meta title for Twitter Card
-Metadata::ogTitle( 'My page title' ); // meta title for Opengraph
+Metadata::ogTitle( 'My page title' ); // meta title for OpenGraph
 ```
 
 #### Set description
@@ -69,7 +71,7 @@ Metadata::ogTitle( 'My page title' ); // meta title for Opengraph
 Metadata::description( 'My page description', [flags: int = Metadata::ALL] );
 Metadata::metaDescription( 'My page description' ); // simply a meta description
 Metadata::twitterDescription( 'My page description' ); // meta description for Twitter Card
-Metadata::ogDescription( 'My page description' ); // meta description for Opengraph
+Metadata::ogDescription( 'My page description' ); // meta description for OpenGraph
 ```
 
 #### Set images
@@ -77,7 +79,7 @@ Metadata::ogDescription( 'My page description' ); // meta description for Opengr
 You can set many images
 
 ```php
-// Meta image for both Twitter Card and Opengraph
+// Meta image for both Twitter Card and OpenGraph
 Metadata::image(
     url: 'https://my-website-url.com/metacard.jpg', 
     [secure_url: ?string = null], 
@@ -104,7 +106,7 @@ Metadata::ogImage(
 );
 ```
 
-#### Set videos for Opengraph
+#### Set videos for OpenGraph
 
 ```php
 Metadata::ogVideo(
@@ -116,7 +118,7 @@ Metadata::ogVideo(
 );
 ```
 
-#### Set audios for Opengraph
+#### Set audios for OpenGraph
 
 ```php
 Metadata::ogAudio(
@@ -129,9 +131,9 @@ Metadata::ogAudio(
 #### Set url
 
 ```php
-Metadata::url( 'https://my-website-url.com/', [flags: int = Metadata::ALL] ); // meta URL for both Twitter and Opengraph
+Metadata::url( 'https://my-website-url.com/', [flags: int = Metadata::ALL] ); // meta URL for both Twitter and OpenGraph
 Metadata::twitterUrl( 'https://my-website-url.com/' ); // meta URL for Twitter Card
-Metadata::ogUrl( 'https://my-website-url.com/' ); // meta URL for Opengraph
+Metadata::ogUrl( 'https://my-website-url.com/' ); // meta URL for OpenGraph
 ```
 
 #### Set author
@@ -140,7 +142,7 @@ Metadata::ogUrl( 'https://my-website-url.com/' ); // meta URL for Opengraph
 Metadata::author( 'John Doe' );
 ```
 
-#### Set Opengraph Type
+#### Set OpenGraph Type
 
 ```php
 Metadata::ogType( 'website', [options: array = []]);
@@ -176,13 +178,13 @@ Metadata::fbAppId( 'facebook_id' );
 Metadata::fbAdmins( 'facebook_admins' );
 ```
 
-#### Set Opengraph Site Name
+#### Set OpenGraph Site Name
 
 ```php
 Metadata::ogSiteName( 'My website name' );
 ```
 
-#### Set Opengraph Locale
+#### Set OpenGraph Locale
 
 ```php
 Metadata::ogLocale( 'en_US' );
@@ -236,13 +238,13 @@ Metadata::meta( 'name', 'some meta value' );
 Metadata::twitter( 'name', 'some Twitter Card value', [prefix: MetadataManager::TWITTER_PREFIX], [uniq: bool = false]);
 ```
 
-#### Set an Opengraph value
+#### Set an OpenGraph value
 
 ```php
-Metadata::opengraph( 'name', 'some Opengraph value', [prefix: MetadataManager::OPENGRAPH_PREFIX], [uniq: bool = false]);
+Metadata::opengraph( 'name', 'some OpenGraph value', [prefix: MetadataManager::OPENGRAPH_PREFIX], [uniq: bool = false]);
 
 // or use the alias method :
-Metadata::og( 'name', 'some Opengraph value', [prefix: MetadataManager::OPENGRAPH_PREFIX], [uniq: bool = false]);
+Metadata::og( 'name', 'some OpenGraph value', [prefix: MetadataManager::OPENGRAPH_PREFIX], [uniq: bool = false]);
 ```
 
 #### Generate the HTML tags

@@ -9,7 +9,8 @@
         "facebook",
         "opengraph",
         "tags",
-        "helper"
+        "helper",
+        "laravel"
     ],
     "authors": [
       {
