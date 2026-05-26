@@ -379,7 +379,7 @@ class MetadataManager
      * @param array $options
      * @return $this
      */
-    public function ogType(string $type, array $options = []): MetadataManager
+    public function ogType(string $type = 'website', array $options = []): MetadataManager
     {
         $prefix = self::OPENGRAPH_PREFIX;
         $authorized_keys = [];
